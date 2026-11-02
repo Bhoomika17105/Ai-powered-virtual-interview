@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* { font-family: 'Poppins', sans-serif; box-sizing: border-box; margin: 0; padding: 0; }
+
+.info-page {
+  min-height: 100vh;
+  background: #0f1117;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.info-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.info-header {
+  text-align: center;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.back-btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: transparent;
+  border: 1px solid #2a2d3a;
+  color: #888;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.back-btn:hover {
+  border-color: #7494ec;
+  color: #7494ec;
+}
+
+.info-header h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.info-header p {
+  color: #888;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.role-pill {
+  display: inline-block;
+  background: #7494ec22;
+  border: 1px solid #7494ec55;
+  color: #7494ec;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.info-section {
+  background: #1a1d27;
+  border-radius: 16px;
+  padding: 28px;
+  border: 1px solid #2a2d3a;
+  margin-bottom: 20px;
+}
+
+.info-section h2 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.level-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.level-card {
+  background: #0f1117;
+  border: 2px solid #2a2d3a;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.level-card:hover { border-color: #7494ec55; }
+.level-card.selected { border-color: #7494ec; background: #7494ec11; }
+.level-icon { font-size: 28px; display: block; margin-bottom: 8px; }
+.level-card h3 { font-size: 16px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+.level-card p { font-size: 13px; color: #888; }
+
+.check {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #7494ec;
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tool-chip {
+  background: #0f1117;
+  border: 1px solid #2a2d3a;
+  color: #aaa;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.tool-chip:hover { border-color: #7494ec55; color: #fff; }
+
+.tool-chip.selected {
+  background: #7494ec22;
+  border-color: #7494ec;
+  color: #7494ec;
+  font-weight: 600;
+}
+
+.tool-chip.extra {
+  background: #22c55e22;
+  border-color: #22c55e;
+  color: #22c55e;
+}
+
+.custom-tool-wrapper {
+  position: relative;
+  margin-top: 12px;
+}
+
+.custom-tool input {
+  width: 100%;
+  background: #0f1117;
+  border: 1px solid #2a2d3a;
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.custom-tool input:focus { border-color: #7494ec; }
+.custom-tool input::placeholder { color: #444; }
+
+.suggestions-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #1e2130;
+  border: 1px solid #2a2d3a;
+  border-radius: 10px;
+  z-index: 100;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.suggestion-item {
+  padding: 12px 16px;
+  color: #ccc;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s;
+  border-bottom: 1px solid #2a2d3a22;
+}
+
+.suggestion-item:last-child { border-bottom: none; }
+.suggestion-item:hover { background: #7494ec22; color: #7494ec; }
+
+.info-error {
+  color: #ff4444;
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.start-btn {
+  width: 100%;
+  padding: 16px;
+  background: #7494ec;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.2s;
+}
+
+.start-btn:hover { background: #5a7de8; }
+
+@media (max-width: 600px) {
+  .level-grid { grid-template-columns: 1fr; }
+  .back-btn { position: relative; margin-bottom: 16px; }
+} 
